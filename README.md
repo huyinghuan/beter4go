@@ -16,7 +16,9 @@
 
 ## json
 
-建议使用 github.com/json-iterator/go 代替原生 json 进行json序列化和反序列化
+建议使用 github.com/json-iterator/go 代替原生 json 进行json序列化和反序列化, 在qps较高时，json的序列化和反序列化 比较耗io，如有可能，使用
+
+[protocol buffer](https://developers.google.com/protocol-buffers/docs/gotutorial) 做服务间的数据传输协议，取代json
 
 ## 字符串拼接时
 
