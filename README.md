@@ -25,3 +25,17 @@
 尽量使用 `strings.Join` 或 `strings.Builder` 减少内存重新分配 
 
 
+## 跨平台编译
+
+To Windows from macOS
+
+```
+brew install mingw-w64.
+CGO_ENABLED=1  CXX=x86_64-w64-mingw32-g++ CC=x86_64-w64-mingw32-gcc GOOS=windows GOARCH=amd64  go build 
+```
+
+To Windows from debian or ubuntu 
+```
+sudo apt-get install gcc-mingw-w64
+CGO_ENABLED=1  CXX=x86_64-w64-mingw32-g++ CC=x86_64-w64-mingw32-gcc GOOS=windows GOARCH=amd64  go build 
+```
